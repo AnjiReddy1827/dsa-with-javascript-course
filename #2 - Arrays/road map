@@ -1,0 +1,178 @@
+🔥 Top JavaScript Concepts for Solving Any DSA Problem
+1. Master Arrays & Strings
+Arrays and strings form the core of most DSA problems.
+
+Traversal (for, while, for...of)
+
+In-place operations (push, pop, splice, slice)
+
+Two-pointer pattern
+
+Sliding window
+
+String manipulation (split, join, substring, charAt, replace, indexOf)
+
+✅ Example:
+
+Reverse a string
+
+Find longest substring without repeating characters
+
+2. Hashing / Maps / Sets
+Used for constant time lookup, deduplication, counting, and frequency mapping.
+
+js
+Copy
+Edit
+const map = new Map();
+const set = new Set();
+const obj = {};
+✅ Example:
+
+Two Sum
+
+Detect duplicates
+
+Group anagrams
+
+3. Recursion & Backtracking
+Key to solving problems that require exploration like permutations, subsets, trees, etc.
+
+js
+Copy
+Edit
+function recurse(n) {
+  if (n === 0) return;
+  recurse(n - 1);
+}
+✅ Example:
+
+Fibonacci
+
+N-Queens
+
+Subset Sum
+
+4. Sorting & Searching
+Sort-based logic is used in almost all optimization problems.
+
+.sort((a, b) => a - b) // Numeric sort
+
+Binary Search (for efficient lookup in sorted arrays)
+
+Custom sorting
+
+✅ Example:
+
+K closest numbers
+
+Median of two arrays
+
+Merge intervals
+
+5. Stack & Queue
+Core to problems involving order, history, and sliding operations.
+
+js
+Copy
+Edit
+const stack = [];
+stack.push(x); stack.pop();
+
+const queue = [];
+queue.push(x); queue.shift();
+✅ Example:
+
+Valid parentheses
+
+Next greater element
+
+BFS traversal
+
+6. Greedy Algorithms
+Make optimal choices at each step.
+
+✅ Example:
+
+Activity selection
+
+Minimum number of platforms
+
+Coin change (greedy variant)
+
+7. Dynamic Programming (DP)
+Solve overlapping subproblem problems by memoization or tabulation.
+
+js
+Copy
+Edit
+const dp = new Array(n + 1).fill(0);
+dp[0] = 1;
+✅ Example:
+
+Climbing stairs
+
+Knapsack
+
+Longest common subsequence
+
+8. Graph Traversals (BFS / DFS)
+Used for problems on networks, grids, and paths.
+
+js
+Copy
+Edit
+function dfs(node, visited) {
+  if (visited.has(node)) return;
+  visited.add(node);
+  for (const neighbor of graph[node]) {
+    dfs(neighbor, visited);
+  }
+}
+✅ Example:
+
+Number of islands
+
+Detect cycles
+
+Topological sort
+
+9. Sliding Window & Two Pointers
+Used to optimize time complexity from O(n^2) to O(n).
+
+✅ Example:
+
+Max sum subarray of size k
+
+Longest substring without repeating characters
+
+Trapping rainwater
+
+10. Bit Manipulation
+Powerful for low-level and optimization problems.
+
+js
+Copy
+Edit
+a ^ b; // XOR
+a & b; // AND
+a | b; // OR
+a << 1; // left shift
+✅ Example:
+
+Find the single number
+
+Subset generation
+
+Counting set bits
+
+🧠 Bonus: Problem Solving Techniques
+Pattern recognition (sliding window, prefix sum, etc.)
+
+Dry run the logic with examples
+
+Think space-time tradeoffs
+
+Break the problem down: Inputs → Process → Output
+
+Use helper functions for modular code
