@@ -176,3 +176,88 @@ Think space-time tradeoffs
 Break the problem down: Inputs → Process → Output
 
 Use helper functions for modular code
+////
+////
+1. Map — Better Key-Value Store
+js
+Copy
+Edit
+const map = new Map();
+✅ Features:
+Stores key-value pairs.
+
+Keys can be of any type: string, number, object, etc.
+
+Maintains insertion order.
+
+Has built-in methods like .set(), .get(), .has(), .delete().
+
+💡 Example:
+js
+Copy
+Edit
+map.set("name", "Anji");
+map.set(123, "numberKey");
+map.set({ x: 1 }, "objectKey");
+
+console.log(map.get("name")); // "Anji"
+console.log(map.has(123)); // true
+📌 When to use: When you need a dictionary-like structure with keys of any type and guaranteed order.
+
+✅ 2. Set — Unique Value Collection
+js
+Copy
+Edit
+const set = new Set();
+✅ Features:
+Stores only unique values.
+
+Can hold any type of values: primitives or objects.
+
+Has .add(), .has(), .delete(), .size.
+
+💡 Example:
+js
+Copy
+Edit
+set.add("apple");
+set.add("apple"); // ignored because it's already in the set
+set.add("banana");
+
+console.log(set.size); // 2
+console.log(set.has("banana")); // true
+📌 When to use: When you want to store only unique elements (e.g., removing duplicates).
+
+✅ 3. Object — Classic Key-Value Store
+js
+Copy
+Edit
+const obj = {};
+✅ Features:
+Traditional key-value store.
+
+Keys are always strings or symbols (even if you pass numbers).
+
+Doesn’t guarantee insertion order in some cases.
+
+Can have prototype pollution issues (like __proto__).
+
+💡 Example:
+js
+Copy
+Edit
+obj.name = "Anji";
+obj["age"] = 25;
+
+console.log(obj.name); // "Anji"
+📌 When to use: For simple data models, configs, or when you don’t need fancy methods.
+
+🔁 Summary Table
+Feature	Map	Set	Object
+Key Type	Any	N/A	String/Symbol
+Value Type	Any	Unique Values	Any
+Order Preserved	Yes	Yes	Not Always
+Methods	.set(), .get()	.add(), .has()	Basic property access
+Duplicates?	No keys	No values	No keys
+///
+///
